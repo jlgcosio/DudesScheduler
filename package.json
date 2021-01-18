@@ -24,6 +24,7 @@
   "homepage": "https://github.com/jlgcosio/DudesScheduler#readme",
   "dependencies": {
     "discord.js": "^12.5.1",
+    "discord.js-commando": "github:discordjs/Commando",
     "sqlite3": "^5.0.1"
   }
 }
