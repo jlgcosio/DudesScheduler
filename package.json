@@ -1,0 +1,29 @@
+{
+  "name": "dudesscheduler",
+  "version": "0.0.1",
+  "description": "A Discord calendar bot made for scheduling TTRPG sessions online",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlgcosio/DudesScheduler.git"
+  },
+  "keywords": [
+    "Discord",
+    "discord.js",
+    "node",
+    "ttrpg"
+  ],
+  "author": "Dudes and Dice Davao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jlgcosio/DudesScheduler/issues"
+  },
+  "homepage": "https://github.com/jlgcosio/DudesScheduler#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "sqlite3": "^5.0.1"
+  }
+}
