@@ -10,20 +10,24 @@ const client = new CommandoClient({
     invite: config.invite
 });
 
+// Commando CommandRegistry
 client.registry
 	.registerDefaultTypes()
 	.registerGroups([
-		['horde', 'Your First Command Group'],
+		['horde', 'Test Commands'],
 	])
 	.registerDefaultGroups()
 	.registerDefaultCommands()
 	.registerCommandsIn(path.join(__dirname, 'commands'));
 
+// Display console message on bot login
 client.once('ready', () => {
 	console.log(`Logged in as ${client.user.tag}! (${client.user.id})`);
 	client.user.setActivity('with Commando');
 });
 
+// Basic Error Handling
 client.on('error', console.error);
 
+// Bot client login
 client.login(config.token);
