@@ -1,29 +1,17 @@
 // Import libraries
-const { CommandoClient } = require("discord.js-commando");
+const Discord = require("discord.js");
 const path = require("path");
 const config = require("./config.json");
 
-// Instantiate bot client
-const client = new CommandoClient({
-    commandPrefix: config.prefix,
-    owner: config.ownerID,
-    invite: config.invite
-});
+//Bot config and login
 
-// Commando CommandRegistry
-client.registry
-	.registerDefaultTypes()
-	.registerGroups([
-		['horde', 'Test Commands'],
-	])
-	.registerDefaultGroups()
-	.registerDefaultCommands()
-	.registerCommandsIn(path.join(__dirname, 'commands'));
+// Instantiate bot client
+const client = new Discord.Client()
 
 // Display console message on bot login
 client.once('ready', () => {
 	console.log(`Logged in as ${client.user.tag}! (${client.user.id})`);
-	client.user.setActivity('with Commando');
+	client.user.setActivity('camp the quest channel');
 });
 
 // Basic Error Handling
