@@ -4,7 +4,8 @@
   "description": "A Discord calendar bot made for scheduling TTRPG sessions online",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,9 @@
   "homepage": "https://github.com/jlgcosio/DudesScheduler#readme",
   "dependencies": {
     "discord.js": "^12.5.1",
-    "discord.js-commando": "github:discordjs/Commando",
+    "express": "^4.17.1",
+    "passport": "^0.4.1",
+    "passport-discord": "^0.1.4",
     "sqlite3": "^5.0.1"
   }
 }
