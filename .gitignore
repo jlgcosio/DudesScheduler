@@ -105,3 +105,6 @@ dist
 
 # Bot config
 config.json
+
+# TS Compile
+app/
