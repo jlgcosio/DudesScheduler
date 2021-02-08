@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "outDir": "./app",
+        "target": "es6",
+        "allowJs": true,
+        "esModuleInterop": true,
+        "removeComments": true,
+        "sourceMap": false
+    },
+    "include": [
+        "./src/**/*"
+    ]
+}
