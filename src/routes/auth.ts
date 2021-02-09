@@ -1,13 +1,12 @@
 const authRouter = require('express').Router();
 const authPassport = require('passport');
 
-// Passport authentication
-//authPassport.use();
-
-
 // Oauth2 routes
-authRouter.get('/auth', (req, res) => {
+authRouter.get('/authenticate', authPassport.authenticate('discord'));
+
+authRouter.get('/authenticate/redirect', authPassport.authenticate('discord'), (req, res) => {
+	console.log(res);
 	res.sendStatus(200);
-});
+})
 
 module.exports = authRouter;
