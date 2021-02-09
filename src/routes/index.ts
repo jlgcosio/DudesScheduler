@@ -1,6 +1,6 @@
 const indexRouter = require('express').Router();
-const discord = require('./discord');
+const authRoute = require('./auth');
 
-indexRouter.use('/stuff', discord);
+indexRouter.use('/stuff', authRoute);
 
 module.exports = indexRouter;
