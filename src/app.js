@@ -6,6 +6,8 @@ const express = require('express');
 const passport = require('passport');
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const session = require('express-session');
+const Store = require('connect-mongo')(session);
 
 // Environment variables
 const app = express();
@@ -35,6 +37,16 @@ app.set('view engine', 'ejs');
 // Passport initialization
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use( session({
+	secret: `${process.env.APP_TOKEN}`,
+	cookie: {
+		maxAge: 60000 * 60 *24
+	},
+	saveUninitialized: false,
+	resave: false,
+	store: new Store({mongooseConnection: mongoose.connection})
+}));
 
 app.use(bodyParser.json());
 
