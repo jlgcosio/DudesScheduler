@@ -5,7 +5,7 @@ const authPassport = require('passport');
 authRouter.get('/authenticate', authPassport.authenticate('discord'));
 
 authRouter.get('/authenticate/redirect', authPassport.authenticate('discord'), (req, res) => {
-	console.log(res);
+	console.log("Redirect passage");
 	res.sendStatus(200);
 })
 

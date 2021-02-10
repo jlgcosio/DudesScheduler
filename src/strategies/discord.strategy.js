@@ -1,5 +1,5 @@
 var discordStrategyPassport = require('passport');
-var DiscordStrategy = require('passport-discord');
+var DiscordStrategy = require('passport-discord').Strategy;
 
 const oauthScopes = ['identify', 'guilds'];
 
@@ -12,4 +12,5 @@ discordStrategyPassport.use(new DiscordStrategy({
     console.log("Access Token: ", accessToken);
     console.log("Refresh Token:", refreshToken);
     console.log(profile);
+    return cb(null, false);
 }));
